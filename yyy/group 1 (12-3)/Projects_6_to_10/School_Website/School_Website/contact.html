@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &mdash; Yemane Birhan Secondary School contact page</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Lato',sans-serif; color:#2c2c2c; background:#f7f4ef; }
+    header { background:#1a1a2e; padding:0 40px; display:flex; align-items:center; justify-content:space-between; height:75px; }
+    .logo-wrap { display:flex; align-items:center; gap:14px; }
+    .logo-icon { width:48px; height:48px; background:#e8c547; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4em; }
+    .logo-text strong { font-family:'Playfair Display',serif; font-size:1.1em; display:block; color:#e8c547; }
+    .logo-text span { font-size:0.72em; color:#aaa; letter-spacing:1px; text-transform:uppercase; }
+    .header-info { color:#aaa; font-size:0.8em; text-align:right; }
+    .header-info strong { color:#e8c547; display:block; font-size:1.1em; }
+    nav { background:#16213e; display:flex; padding:0 40px; border-bottom:3px solid #e8c547; }
+    nav a { color:#ccc; text-decoration:none; padding:15px 22px; font-size:0.88em; text-transform:uppercase; letter-spacing:1px; display:block; transition:background 0.2s,color 0.2s; }
+    nav a:hover,nav a.active { color:#1a1a2e; background:#e8c547; font-weight:700; }
+    .page-hero { position:relative; height:280px; overflow:hidden; }
+    .page-hero img { width:100%; height:100%; object-fit:cover; object-position:center 50%; filter:brightness(0.45); }
+    .page-hero-text { position:absolute; bottom:36px; left:50px; color:#fff; }
+    .page-hero-text h1 { font-family:'Playfair Display',serif; font-size:2.6em; margin-bottom:6px; }
+    .page-hero-text p { color:#e8c547; text-transform:uppercase; letter-spacing:2px; font-size:0.85em; }
+    .container { max-width:1060px; margin:0 auto; padding:60px 20px; }
+    .section-title { font-family:'Playfair Display',serif; font-size:1.8em; color:#1a1a2e; margin-bottom:6px; }
+    .section-sub { color:#e8c547; font-size:0.8em; text-transform:uppercase; letter-spacing:2px; margin-bottom:10px; }
+    .divider { width:50px; height:3px; background:#e8c547; margin-bottom:28px; }
+    .contact-layout { display:grid; grid-template-columns:1fr 1.6fr; gap:40px; }
+    .info-card { background:#1a1a2e; border-radius:8px; padding:32px; color:#aaa; }
+    .info-card h3 { color:#e8c547; font-size:1em; font-family:'Playfair Display',serif; font-size:1.2em; margin-bottom:20px; }
+    .info-item { display:flex; gap:14px; align-items:flex-start; margin-bottom:22px; }
+    .info-icon { font-size:1.4em; flex-shrink:0; margin-top:2px; }
+    .info-label { font-size:0.75em; text-transform:uppercase; letter-spacing:1px; color:#e8c547; margin-bottom:3px; }
+    .info-val { font-size:0.88em; line-height:1.7; color:#ccc; }
+    .info-card img { width:100%; height:160px; object-fit:cover; border-radius:6px; margin-top:24px; opacity:0.85; }
+    .form-card { background:#fff; border-radius:8px; padding:36px; border-top:4px solid #e8c547; }
+    .form-card h3 { font-family:'Playfair Display',serif; font-size:1.4em; color:#1a1a2e; margin-bottom:6px; }
+    .form-desc { font-size:0.88em; color:#666; margin-bottom:24px; }
+    .form-group { margin-bottom:18px; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    label { display:block; font-size:0.78em; font-weight:700; color:#444; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px; }
+    input[type="text"],input[type="email"],input[type="tel"],select,textarea {
+      width:100%; padding:11px 14px; border:1.5px solid #ddd; border-radius:6px;
+      font-size:0.93em; font-family:'Lato',sans-serif; color:#2c2c2c; background:#fff;
+    }
+    input:focus,select:focus,textarea:focus { outline:none; border-color:#e8c547; }
+    textarea { height:130px; resize:vertical; }
+    .radio-row { display:flex; flex-wrap:wrap; gap:14px; margin-top:6px; }
+    .radio-row label { text-transform:none; letter-spacing:0; font-weight:400; display:flex; align-items:center; gap:6px; cursor:pointer; font-size:0.9em; }
+    input[type="radio"],input[type="checkbox"] { accent-color:#1a1a2e; width:15px; height:15px; }
+    input[type="submit"] { background:#1a1a2e; color:#e8c547; border:none; padding:14px 28px; border-radius:6px; font-size:0.95em; font-weight:700; cursor:pointer; width:100%; margin-top:8px; text-transform:uppercase; letter-spacing:1px; font-family:'Lato',sans-serif; }
+    input[type="submit"]:hover { background:#e8c547; color:#1a1a2e; }
+    .map-placeholder { background:#16213e; border-radius:8px; height:220px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#aaa; margin-top:40px; }
+    .map-placeholder .icon { font-size:2.5em; margin-bottom:10px; }
+    .map-placeholder p { font-size:0.85em; }
+    .map-placeholder strong { color:#e8c547; display:block; margin-bottom:4px; }
+    
+
+#message-toggle{
+  display:none;
+}
+
+.send-btn{
+  background:#1a1a2e;
+  color:#e8c547;
+  border:none;
+  padding:14px 28px;
+  border-radius:6px;
+  font-size:0.95em;
+  font-weight:700;
+  cursor:pointer;
+  width:100%;
+  margin-top:8px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-family:'Lato',sans-serif;
+  display:block;
+  text-align:center;
+  transition:0.3s;
+}
+
+.send-btn:hover{
+  background:#e8c547;
+  color:#1a1a2e;
+}
+
+.thank-you-message{
+  display:none;
+  margin-top:15px;
+  background:#e8f5e9;
+  color:#1b5e20;
+  border:2px solid #81c784;
+  padding:14px;
+  border-radius:6px;
+  text-align:center;
+  font-weight:700;
+}
+
+#message-toggle:checked ~ .thank-you-message{
+  display:block;
+}
+    footer { background:#0f0f23; color:#aaa; text-align:center; padding:28px; font-size:0.82em; }
+    footer a { color:#e8c547; text-decoration:none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo-wrap">
+    <div class="logo-icon">&#127979;</div>
+    <div class="logo-text">
+      <strong>Yemane Birhan Secondary School</strong>
+      <span>Addis Ababa, Ethiopia</span>
+    </div>
+  </div>
+  <div class="header-info"><strong>Est. 1999</strong>Excellence in Education</div>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html" class="active">Contact</a>
+</nav>
+
+<div class="page-hero">
+  <img src="images/29.jpg" alt="School event">
+  <div class="page-hero-text">
+    <h1>Contact Us</h1>
+    <p>We&rsquo;d Love to Hear From You</p>
+  </div>
+</div>
+
+<div class="container">
+  <p class="section-sub">&#9670; Get in Touch</p>
+  <h2 class="section-title">Contact Yemane Birhan School</h2>
+  <div class="divider"></div>
+
+  <div class="contact-layout">
+    <!-- INFO -->
+    <div>
+      <div class="info-card">
+        <h3>School Information</h3>
+        <div class="info-item">
+          <div class="info-icon">&#127968;</div>
+          <div><div class="info-label">Address</div><div class="info-val">Yemane Birhan Secondary School<br>Addis Ababa, Weyra</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128222;</div>
+          <div><div class="info-label">Phone</div><div class="info-val">0113490998<br>0113697539</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128231;</div>
+          <div><div class="info-label">Email</div><div class="info-val">info@yemanebirhan.edu.et<br>director@yemanebirhan.edu.et</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">&#128336;</div>
+          <div><div class="info-label">Office Hours</div><div class="info-val">Monday &ndash; Friday<br>8:00 AM &ndash; 5:00 PM</div></div>
+        </div>
+        <img src="images/3.jpg" alt="Students at Yemane Birhan School">
+      </div>
+
+      <div class="map-placeholder" style="margin-top:20px;">
+        <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.849052946612!2d38.7317!3d9.0054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8535f1a40f19%3A0x4d4d08c5c38c1c9e!2sYemane%20Birhan%20Secondary%20School!5e0!3m2!1sen!2set!4v1691234567890!5m2!1sen!2set" 
+      width="400" 
+      height="450" 
+      >
+    </iframe>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-card">
+      <h3>Send Us a Message</h3>
+      <p class="form-desc">Whether you are a student, parent, or community member &mdash; we welcome your message.</p>
+      <form action="#" method="post">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="e.g. Abebe">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="e.g. Kebede">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+251 9XX XXX XXX">
+        </div>
+        <div class="form-group">
+          <label for="role">You Are a...</label>
+          <select id="role" name="role">
+            <option value="">-- Select your role --</option>
+            <option value="student">Current Student</option>
+            <option value="parent">Parent / Guardian</option>
+            <option value="applicant">Prospective Student</option>
+            <option value="teacher">Teacher / Staff</option>
+            <option value="alumni">Alumni</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="">-- Select a subject --</option>
+            <option value="admission">Admission Enquiry</option>
+            <option value="academic">Academic Information</option>
+            <option value="sports">Sports &amp; Activities</option>
+            <option value="ict">ICT &amp; Web Design Program</option>
+            <option value="feedback">General Feedback</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Preferred Contact Method</label>
+          <div class="radio-row">
+            <label><input type="radio" name="contact" value="email"> Email</label>
+            <label><input type="radio" name="contact" value="phone"> Phone</label>
+            <label><input type="radio" name="contact" value="visit"> In-Person Visit</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Write your message or enquiry here..."></textarea>
+        </div>
+        <div class="form-group">
+          <label><input type="checkbox" name="agree"> I agree that my information may be used to respond to my enquiry.</label>
+        </div>
+        <!-- ADD THIS INSTEAD -->
+
+<input type="checkbox" id="message-toggle">
+
+<label for="message-toggle" class="send-btn">
+  Send Message
+</label>
+
+<div class="thank-you-message">
+  ✅ Thank you! Your message has been sent successfully.
+</div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p><a href="index.html">Home</a> &nbsp;&middot;&nbsp; <a href="about.html">About</a> &nbsp;&middot;&nbsp; <a href="gallery.html">Gallery</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a></p>
+  <p style="margin-top:12px;">&copy; 2018 Yemane Birhan Secondary School </p>
+</footer>
+</body>
+</html>

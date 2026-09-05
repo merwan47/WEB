@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery &mdash; Yemane Birhan Secondary School gallery</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Lato',sans-serif; color:#2c2c2c; background:#f7f4ef; }
+    header { background:#1a1a2e; padding:0 40px; display:flex; align-items:center; justify-content:space-between; height:75px; }
+    .logo-wrap { display:flex; align-items:center; gap:14px; }
+    .logo-icon { width:48px; height:48px; background:#e8c547; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4em; }
+    .logo-text strong { font-family:'Playfair Display',serif; font-size:1.1em; display:block; color:#e8c547; }
+    .logo-text span { font-size:0.72em; color:#aaa; letter-spacing:1px; text-transform:uppercase; }
+    .header-info { color:#aaa; font-size:0.8em; text-align:right; }
+    .header-info strong { color:#e8c547; display:block; font-size:1.1em; }
+    nav { background:#16213e; display:flex; padding:0 40px; border-bottom:3px solid #e8c547; }
+    nav a { color:#ccc; text-decoration:none; padding:15px 22px; font-size:0.88em; text-transform:uppercase; letter-spacing:1px; display:block; transition:background 0.2s,color 0.2s; }
+    nav a:hover,nav a.active { color:#1a1a2e; background:#e8c547; font-weight:700; }
+    .page-hero { position:relative; height:280px; overflow:hidden; }
+    .page-hero img { width:100%; height:100%; object-fit:cover; object-position:center 40%; filter:brightness(0.45); }
+    .page-hero-text { position:absolute; bottom:36px; left:50px; color:#fff; }
+    .page-hero-text h1 { font-family:'Playfair Display',serif; font-size:2.6em; margin-bottom:6px; }
+    .page-hero-text p { color:#e8c547; text-transform:uppercase; letter-spacing:2px; font-size:0.85em; }
+    .container { max-width:1100px; margin:0 auto; padding:50px 20px; }
+    .section-title { font-family:'Playfair Display',serif; font-size:1.8em; color:#1a1a2e; margin-bottom:6px; }
+    .section-sub { color:#e8c547; font-size:0.8em; text-transform:uppercase; letter-spacing:2px; margin-bottom:10px; }
+    .divider { width:50px; height:3px; background:#e8c547; margin-bottom:28px; }
+
+    /* FILTER TABS */
+    .filter-tabs { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:30px; }
+    .tab { padding:8px 20px; border-radius:20px; background:#fff; border:1.5px solid #ddd; font-size:0.82em; cursor:pointer; text-transform:uppercase; letter-spacing:1px; color:#444; transition:all 0.2s; }
+     .tab:hover { background:#1a1a2e; color:#e8c547; border-color:#1a1a2e; }
+
+    /* GALLERY SECTIONS */
+    .gallery-section { margin-bottom:50px; }
+    .gallery-section h3 { font-family:'Playfair Display',serif; font-size:1.3em; color:#1a1a2e; margin-bottom:6px; padding-bottom:10px; border-bottom:2px solid #e8c547; margin-bottom:20px; }
+    .gallery-section .cat-desc { font-size:0.88em; color:#666; margin-bottom:18px; }
+    .grid-masonry { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+    .grid-masonry img { width:100%; height:200px; object-fit:cover; border-radius:6px; transition:transform 0.2s, opacity 0.2s; cursor:pointer; }
+    .grid-masonry img:hover { transform:scale(1.02); opacity:0.9; }
+    .grid-wide { grid-column:span 2; }
+    .grid-wide img { height:250px; }
+    .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+    .grid3 img { width:100%; height:220px; object-fit:cover; border-radius:6px; transition:transform 0.2s; cursor:pointer; }
+    .grid3 img:hover { transform:scale(1.02); }
+
+    /* FEATURED */
+    .featured { display:grid; grid-template-columns:2fr 1fr; gap:10px; margin-bottom:10px; }
+    .featured img { width:100%; object-fit:cover; border-radius:6px; cursor:pointer; }
+    .featured img.main { height:360px; }
+    .featured-side { display:flex; flex-direction:column; gap:10px; }
+    .featured-side img { height:350px; }
+
+    footer { background:#0f0f23; color:#aaa; text-align:center; padding:28px; font-size:0.82em; margin-top:30px; }
+    footer a { color:#e8c547; text-decoration:none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo-wrap">
+    <div class="logo-icon">&#127979;</div>
+    <div class="logo-text">
+      <strong>Yemane Birhan G/S School</strong>
+      <span>Addis Ababa, Ethiopia</span>
+    </div>
+  </div>
+  <div class="header-info"><strong>Est. 1999</strong>Excellence in Education</div>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html" class="active">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="page-hero">
+  <img src="images/2.jpg" alt="Students at school events">
+  <div class="page-hero-text">
+    <h1>Photo Gallery</h1>
+    <p>Moments from School Life &bull; 2017 &ndash; 2018</p>
+  </div>
+</div>
+
+<div class="container">
+  <p class="section-sub">&#9670; Our Memories</p>
+  <h2 class="section-title">School Life in Pictures</h2>
+  <div class="divider"></div>
+
+  <!-- FILTER TABS (decorative) -->
+  <div class="filter-tabs">
+    <div class="tab active">All Photos</div>
+    <div class="tab">Awards</div>
+    <div class="tab">Sports Day</div>
+    <div class="tab">Tree Planting</div>
+    <div class="tab">Community</div>
+  </div>
+
+  <!-- SECTION 1: AWARDS -->
+  <div class="gallery-section">
+    <h3>&#127942; Awards &amp; Recognition Ceremony</h3>
+    <p class="cat-desc">Annual recognition events.</p>
+    <div class="featured">
+      <img class="main" src="images/1.jpg" alt="Award ceremony">
+      <div class="featured-side">
+        <img src="images/37.jpg" alt="School event">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: SPORTS DAY -->
+  <div class="gallery-section">
+    <h3>&#9917; Sports Day &amp; Student Activities</h3>
+    <p class="cat-desc">Students and teachers come together for our annual sports and activities day.</p>
+    <div class="grid-masonry">
+      <img src="images/2.jpg" alt="Girls sports day gathering">
+      <img src="images/3.jpg" alt="Boys sports day gathering">
+      <img src="images/30.jpg" alt="Football team photo">
+      <img src="images/19.jpg" alt="Sports activity">
+    </div>
+  </div>
+
+  <!-- SECTION 3: TREE PLANTING -->
+  <div class="gallery-section">
+    <h3>&#127807; Tree Planting Campaign 2017</h3>
+    <p class="cat-desc">Our students proudly participated in Ethiopia's 700 Million Seedlings national campaign &mdash; renewal through planting.</p>
+    <div class="featured">
+      <img class="main" src="images/20.jpg" alt="700 million seedlings campaign banner">
+      <div class="featured-side">
+        <img src="images/7.jpg" alt="Students with seedlings">
+        <img src="images/8.jpg" alt="Student planting a tree">
+      </div>
+    </div>
+    <div class="grid3" style="margin-top:10px;">
+      <img src="images/10.jpg" alt="Group tree planting">
+      <img src="images/13.jpg" alt="Teacher planting tree">
+      <img src="images/15.jpg" alt="Student with planted tree">
+    </div>
+  </div>
+
+  <!-- SECTION 4: MORE ACTIVITIES -->
+  <div class="gallery-section">
+    <h3>&#128247; More School Moments</h3>
+    <p class="cat-desc">A selection of memorable moments from school life at Yemane Birhan.</p>
+    <div class="grid-masonry">
+      <img src="images/9.jpg" alt="School activity">
+      <img src="images/18.jpg" alt="School event">
+      <img src="images/19.jpg" alt="Student activity">
+      <img src="images/21.jpg" alt="School moment">
+      <img src="images/22.jpg" alt="School activity">
+      <img src="images/24.jpg" alt="School event">
+      <img src="images/26.jpg" alt="School gathering">
+      <img src="images/17.jpg" alt="Students together">
+    </div>
+  </div>
+
+  <!-- SECTION 5: REMAINING -->
+  <div class="gallery-section">
+    <h3>&#128640; Community &amp; Outreach</h3>
+    <p class="cat-desc">Our students give back and engage with the broader Addis Ababa community.</p>
+    <div class="grid3">
+      <img src="images/32.jpg" alt="Community activity">
+      <img src="images/33.jpg" alt="School outreach">
+      <img src="images/34.jpg" alt="Community event">
+      <img src="images/35.jpg" alt="Student activity">
+      <img src="images/36.jpg" alt="School event">
+      <img src="images/37.jpg" alt="Community gathering">
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p><a href="index.html">Home</a> &nbsp;&middot;&nbsp; <a href="about.html">About</a> &nbsp;&middot;&nbsp; <a href="gallery.html">Gallery</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a></p>
+  <p style="margin-top:12px;">&copy; 2018 Yemane Birhan Secondary School</p>
+</footer>
+</body>
+</html>

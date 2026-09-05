@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About &mdash; Yemane Birhan Secondary School about page</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Lato',sans-serif; color:#2c2c2c; background:#f7f4ef; }
+    header { background:#1a1a2e; padding:0 40px; display:flex; align-items:center; justify-content:space-between; height:75px; }
+    .logo-wrap { display:flex; align-items:center; gap:14px; }
+    .logo-icon { width:48px; height:48px; background:#e8c547; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4em; }
+    .logo-text strong { font-family:'Playfair Display',serif; font-size:1.1em; display:block; color:#e8c547; }
+    .logo-text span { font-size:0.72em; color:#aaa; letter-spacing:1px; text-transform:uppercase; }
+    .header-info { color:#aaa; font-size:0.8em; text-align:right; }
+    .header-info strong { color:#e8c547; display:block; font-size:1.1em; }
+    nav { background:#16213e; display:flex; padding:0 40px; border-bottom:3px solid #e8c547; }
+    nav a { color:#ccc; text-decoration:none; padding:15px 22px; font-size:0.88em; text-transform:uppercase; letter-spacing:1px; display:block; transition:background 0.2s,color 0.2s; }
+    nav a:hover,nav a.active { color:#1a1a2e; background:#e8c547; font-weight:700; }
+    .page-hero { position:relative; height:340px; overflow:hidden; }
+    .page-hero img { width:100%; height:100%; object-fit:cover; object-position:center 30%; filter:brightness(0.5); }
+    .page-hero-text { position:absolute; bottom:40px; left:50px; color:#fff; }
+    .page-hero-text h1 { font-family:'Playfair Display',serif; font-size:2.6em; margin-bottom:6px; }
+    .page-hero-text p { color:#e8c547; text-transform:uppercase; letter-spacing:2px; font-size:0.85em; }
+    .container { max-width:1060px; margin:0 auto; padding:60px 20px; }
+    .section-title { font-family:'Playfair Display',serif; font-size:1.8em; color:#1a1a2e; margin-bottom:6px; }
+    .section-sub { color:#e8c547; font-size:0.8em; text-transform:uppercase; letter-spacing:2px; margin-bottom:10px; }
+    .divider { width:50px; height:3px; background:#e8c547; margin-bottom:28px; }
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; margin-bottom:60px; }
+    .two-col img { width:100%; height:350px; object-fit:cover; border-radius:8px; }
+    .two-col.reverse { direction:rtl; }
+    .two-col.reverse > * { direction:ltr; }
+    p { line-height:1.8; color:#444; margin-bottom:14px; font-size:0.95em; }
+    .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:10px; }
+    .value-card { background:#fff; border-radius:8px; padding:28px; text-align:center; border-top:4px solid #e8c547; }
+    .value-icon { font-size:2.2em; margin-bottom:12px; }
+    .value-card h3 { font-size:1em; font-weight:700; color:#1a1a2e; margin-bottom:8px; }
+    .value-card p { font-size:0.85em; color:#555; }
+    .staff-section { background:#1a1a2e; padding:60px 0; }
+    .staff-section .section-title { color:#fff; }
+    .staff-section .section-sub { color:#e8c547; }
+    .staff-section .divider { background:#e8c547; }
+    .staff-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .staff-card { background:#16213e; border-radius:8px; overflow:hidden; }
+    .staff-img { width:100%; height:220px; object-fit:cover; object-position:center top; }
+    .staff-body { padding:18px; }
+    .staff-name { color:#e8c547; font-weight:700; font-size:1em; margin-bottom:4px; }
+    .staff-role { color:#aaa; font-size:0.82em; }
+    table { width:100%; border-collapse:collapse; background:#fff; border-radius:8px; overflow:hidden; }
+    caption { font-family:'Playfair Display',serif; font-size:1.1em; color:#1a1a2e; text-align:left; padding:16px 20px 10px; font-weight:700; }
+    th { background:#1a1a2e; color:#e8c547; padding:12px 18px; text-align:left; font-size:0.85em; letter-spacing:1px; text-transform:uppercase; }
+    td { padding:12px 18px; border:1px solid #eee; font-size:0.9em; }
+    tr:nth-child(even) td { background:#f7f4ef; }
+    footer { background:#0f0f23; color:#aaa; text-align:center; padding:28px; font-size:0.82em; }
+    footer a { color:#e8c547; text-decoration:none; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo-wrap">
+    <div class="logo-icon">&#127979;</div>
+    <div class="logo-text">
+      <strong>Yemane Birhan Secondary School</strong>
+      <span>Addis Ababa, Ethiopia</span>
+    </div>
+  </div>
+  <div class="header-info"><strong>Est. 1999</strong>Excellence in Education</div>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="page-hero">
+  <img src="images/3.jpg" alt="Students at Yemane Birhan School">
+  <div class="page-hero-text">
+    <h1>About Our School</h1>
+    <p>History &bull; Values &bull; Community</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="two-col">
+    <img src="images/2.jpg" alt="Students gathered at school">
+    <div>
+      <p class="section-sub">&#9670; Our Story</p>
+      <h2 class="section-title">Who We Are</h2>
+      <div class="divider"></div>
+      <p>Yemane Birhan Secondary School has served the Addis Ababa community for over 18 years, providing quality education to thousands of Ethiopian students. We are a proud institution committed to nurturing the next generation of Ethiopian leaders.</p>
+      <p>Our school offers education from Grade 9 through Grade 12 in both Natural Science and Social Science streams. With over 1,200 enrolled students and more than 50+ dedicated teachers, we strive for academic excellence every single day.</p>
+      <p>We believe that every student has the potential to succeed, and we provide the environment, support, and encouragement to help them reach their goals.</p>
+    </div>
+  </div>
+
+  <div class="two-col reverse">
+    <img src="images/7.jpg" alt="Students participating in tree planting">
+    <div>
+      <p class="section-sub">&#9670; Our Community</p>
+      <h2 class="section-title">Community &amp; Environment</h2>
+      <div class="divider"></div>
+      <p>Our students are more than learners — they are active citizens. We participate in community service programs including Ethiopia's national tree planting campaigns, sports events, and cultural activities.</p>
+      <p>In 2017, our students proudly joined the <strong>700 Million Seedlings</strong> national campaign, planting trees across Addis Ababa as part of the government's green initiative. We are committed to contributing to a greener, healthier Ethiopia.</p>
+      <p>Our students develop a strong sense of responsibility for their environment, their school, and their nation.</p>
+    </div>
+  </div>
+
+  <p class="section-sub">&#9670; What We Stand For</p>
+  <h2 class="section-title">Our Core Values</h2>
+  <div class="divider"></div>
+  <div class="values-grid">
+    <div class="value-card"><div class="value-icon">&#128218;</div><h3>Academic Excellence</h3><p>We challenge every student to reach their highest potential through rigorous, engaging academics.</p></div>
+    <div class="value-card"><div class="value-icon">&#127811;</div><h3>Environmental Responsibility</h3><p>We actively participate in green campaigns, teaching students to care for their natural environment.</p></div>
+    <div class="value-card"><div class="value-icon">&#9917;</div><h3>Sports &amp; Health</h3><p>Physical fitness and teamwork are central to student development at Yemane Birhan School.</p></div>
+    <div class="value-card"><div class="value-icon">&#127942;</div><h3>Recognition &amp; Reward</h3><p>We celebrate student achievement through annual awards and recognition ceremonies.</p></div>
+    <div class="value-card"><div class="value-icon">&#128101;</div><h3>Community Spirit</h3><p>Our school is a community. We support, uplift, and encourage each other every day.</p></div>
+    <div class="value-card"><div class="value-icon">&#128187;</div><h3>Technology &amp; Innovation</h3><p>Our ICT and Web Design programs prepare students for the digital future of Ethiopia.</p></div>
+  </div>
+</div>
+
+<div class="staff-section">
+  <div class="container">
+    <p class="section-sub"> School people</p>
+    <div class="divider"></div>
+    <div class="staff-grid">
+      <div class="staff-card">
+        <img class="staff-img" src="images/1.jpg" alt="School director">
+        <div class="staff-body"><div class="staff-name"></div><div class="staff-role">School Director</div></div>
+      </div>
+      <div class="staff-card">
+        <img class="staff-img" src="images/20.jpg" alt="Academic staff">
+        <div class="staff-body"><div class="staff-name"></div><div class="staff-role">Green Legacy </div></div>
+      </div>
+      <div class="staff-card">
+        <img class="staff-img" src="images/30.jpg" alt="Sports coordinator">
+        <div class="staff-body"><div class="staff-name"></div><div class="staff-role">Sports Activities </div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <p class="section-sub">&#9670; Key Facts</p>
+  <h2 class="section-title">School at a Glance</h2>
+  <div class="divider"></div>
+  <table border="1">
+    <caption>Yemane Birhan Secondary School &mdash; Key Information</caption>
+    <thead><tr><th>Category</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><td>School Name</td><td>Yemane Birhan Secondary School</td></tr>
+      <tr><td>Location</td><td>Kolfe Keranio, weyra sefer, Addis Ababa</td></tr>
+      <tr><td>Founded</td><td>1999</td></tr>
+      <tr><td>Grades Offered</td><td>Grade 9, 10, 11, 12</td></tr>
+      <tr><td>Streams</td><td>Natural Science &amp; Social Science</td></tr>
+      <tr><td>Total Students</td><td>1,200+</td></tr>
+      <tr><td>Teaching Staff</td><td>50+ qualified teachers</td></tr>
+      <tr><td>Subjects Offered</td><td>Mathematics, Physics, Chemistry, Biology, English, Amharic, ICT, History, Geography and more</td></tr>
+      <tr><td>Career Department</td><td>Web Design &amp; Development, Journalism, Finishing, Marketing, Accounting</td></tr>
+      <tr><td>School Language</td><td>Amharic &amp; English</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<footer>
+  <p><a href="index.html">Home</a> &nbsp;&middot;&nbsp; <a href="about.html">About</a> &nbsp;&middot;&nbsp; <a href="gallery.html">Gallery</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a></p>
+  <p style="margin-top:12px;">&copy; 2018 Yemane Birhan Secondary School </p>
+</footer>
+</body>
+</html>
